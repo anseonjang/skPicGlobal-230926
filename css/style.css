@@ -449,10 +449,10 @@ footer ul.sns i {
 }
 
 /* ====================== 
-    750px 이하 
+    760px 이하 
 =======================*/
 
-@media(max-width:750px) {
+@media(max-width:760px) {
 
     /* <<- 미디어쿼리 넣기 - 괄호는 맨끝*/
 
@@ -477,11 +477,6 @@ footer ul.sns i {
         display: none;
 
     }
-
-
-
-
-
 
 
 
