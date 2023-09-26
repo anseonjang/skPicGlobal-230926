@@ -467,13 +467,13 @@ footer ul.sns i {
     /* logo */
     header .innerHeader .navbar h1.logo {
 
-        width: 50%;
+        width: 65%;
 
     }
 
     /* menu */
     header .innerHeader .navbar ul.menu {
-        width: 50%;
+        width: 35%;
         display: none;
 
     }
