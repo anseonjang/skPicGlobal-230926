@@ -718,6 +718,13 @@ footer ul.sns i {
         line-height: 1.6;
     }
 
+/* topBtn */
+.topBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    display: none;
+}
 
 
 }
