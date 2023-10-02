@@ -1,14 +1,11 @@
 $(function () {
-
-    // ● logo,topBtn 최상단 
+// 1 ● logo,topBtn 최상단 
     $(".logo, .topBtn").on("click", function () {
-        $("html,body").animate({
+        $("html,body").stop().animate({
             scrollTop: 0
         }, 400); // 0.4초
     });
-
-
-    // ● arrow 버튼이 500px 도달시 나타남
+// 2 ● arrow 버튼이 500px 도달시 나타남
     // 안보이던 화살표가 500px 이상으로 스크롤이 내려오면 나타나고 500px 이하일때 사라짐 
     // window => 웹브라우저 
     $(window).scroll(function () {
@@ -19,8 +16,8 @@ $(function () {
         }
     });
 
-    // ● 메뉴 클릭시 스크롤 애니메이션 
-    // a[href^='#'] => #으로 시작하는 a 요소 선택시 사용
+// 3 ● 메뉴 클릭시 스크롤 애니메이션 
+    // a[href^='#'] => #으로 시작하는 a의 요소 선택시 사용
     $("ul.menu li a[href^='#']").on("click", function () {
         // 클릭한 메뉴 항목의 href 속성값을 target에 넣어줌
         var target = $(this).attr("href");
@@ -37,13 +34,19 @@ $(function () {
         // 모든 a에 .active 제거 
         $(this).addClass("active");
         // 클릭한 메뉴만 .active 추가
-
     });
+	
+//  4 ● 다른 영역을 클릭 시 active 제거 (★ 추가)
+$(document).on("click", function (e) {
+    if (!$(e.target).closest("ul.menu li").length) {
+        // 클릭한 영역이 메뉴 항목 이외의 영역이면
+        $("ul.menu li a").removeClass("active"); // 모든 메뉴 항목에서 active 클래스 제거
+    }
+});
+	
+	
 
-
-
-
-    // ● tab menu 
+// 5 ● tab menu 
     'use strict'; // 엄격모드 활성화
     $(".info-list li").click(function () {
         // 현재 클릭한 li에 selected 추가하고 형제요소들의 selected 삭제
@@ -54,8 +57,15 @@ $(function () {
         $("." + $(this).data("class")).fadeIn();
     });
 
+	
+	
 
-    // ● toggle btn 
+
+	
+
+// 6 ● toggle btn 
+
+
     var $menu = $(".menu");
     var $toggleBtn = $(".toggleBtn");
     var menuVisible = false;
@@ -72,9 +82,8 @@ $(function () {
             $menu.hide(); // 메뉴 숨김 
         }
     });
-
 	
-// 창 크기가 변경될 때 메뉴 표시 상태를 업데이트
+// 7 ● 창 크기가 변경될 때 메뉴 표시 상태를 업데이트 (★ 추가)
 $(window).resize(function () {
     if ($(window).width() >= 768) {
         // 창 너비가 768px 이상인 경우 (PC 구조로 변경될 때),
@@ -89,9 +98,9 @@ $(window).resize(function () {
     }
 });
 
-    
+	
 
-    // ● 문서 클릭시 메뉴 닫힘
+// 8 ● 문서 클릭시 메뉴 닫힘
 
     $(document).click(function (e) {
         // 메뉴가 현재 표시중이고, 클릭한 요소가 메뉴 내부 요소가 아닌 경우
@@ -112,7 +121,7 @@ $(window).resize(function () {
     // 코드의 실행 초기에 메뉴가 숨겨져있음을 나타냄. 
     // 이것으로, 코드에 변수값을 변경하여 메뉴를 표시하거나 숨길 수 있음)
 
-    // ● 모바일 아코디언
+// 9 ● 모바일 아코디언
 
     var allDT = $("dl.accordion dt");
     var allDd = $("dl.accordion dd");
