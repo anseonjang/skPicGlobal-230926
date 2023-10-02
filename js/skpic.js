@@ -73,6 +73,18 @@ $(function () {
         }
     });
 
+	
+// 창 크기가 변경될 때 메뉴 표시 상태를 업데이트
+$(window).resize(function () {
+    if ($(window).width() >= 768) {
+        // PC 구조로 변경될 때 메뉴를 다시 인라인 구조로 표시
+        $menu.css("display", "");
+        menuVisible = false;
+    }
+});
+	
+    
+
     // ● 문서 클릭시 메뉴 닫힘
 
     $(document).click(function (e) {
