@@ -77,12 +77,18 @@ $(function () {
 // 창 크기가 변경될 때 메뉴 표시 상태를 업데이트
 $(window).resize(function () {
     if ($(window).width() >= 768) {
-        // PC 구조로 변경될 때 메뉴를 다시 인라인 구조로 표시
+        // 창 너비가 768px 이상인 경우 (PC 구조로 변경될 때),
+        // 메뉴를 다시 인라인 구조로 표시
+
+        // 메뉴의 CSS display 속성을 초기값("")으로 설정하여
+        // 이전에 JavaScript로 변경된 스타일을 제거
         $menu.css("display", "");
+
+        // 메뉴가 숨겨진 상태로 표시되도록 menuVisible 변수를 false로 설정
         menuVisible = false;
     }
 });
-	
+
     
 
     // ● 문서 클릭시 메뉴 닫힘
