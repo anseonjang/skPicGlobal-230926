@@ -478,6 +478,43 @@ width: 95%;
 
 
 
+    /* menu */
+    header .innerHeader .navbar ul.menu { /* 수정 ★ 23.10.03 */  
+        display: none;
+		 flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7); /* 배경색 적용 */
+        width: 100%; /* 가득 차도록 설정 */
+        padding: 10px 0; /* 위아래 패딩 추가 */
+        position: absolute;
+        top: 38%; /* 메뉴가 토글 버튼 아래에 나타나도록 설정 */
+        left: 0;      
+        z-index: 1; /* 토글 버튼 위로 나타나도록 z-index 설정 */
+		    margin-left: 0px; /* 왼쪽 여백 제거 */
+			 text-align: center;
+        margin-top: 50px;
+    }
+
+
+	
+    header .navbar .menu li {
+        text-align: center;
+    }
+
+    header .navbar .menu li:hover,
+    header .navbar .menu li:focus {
+        color: #000;
+    }
+
+    /* 토글 버튼 스타일 */
+    header .innerHeader .navbar img.toggleBtn { /* 수정 ★ 23.10.03 */  
+        display: block;
+        margin-top: 20px;
+        width: 45px;
+    
+    }
+
+
+
     /* logo,menu 50%로 변경 */
 
     /* logo */
@@ -485,13 +522,6 @@ width: 95%;
    
 width:100px;
 margin-top:10px;
-    }
-
-    /* menu */
-    header .innerHeader .navbar ul.menu { /* 수정 ★ 23.10.03 */    
-      
-        display: none;
-
     }
 
 
@@ -503,71 +533,8 @@ margin-top:10px;
 margin-top:20px;width:45px;
     }
 
-    header .navbar .menu {
-        display: none;
-        flex-direction: column;
-        /* block구조*/
-        width: 100%;
-        text-align: center;
-        margin-top: 50px;
-        margin-left: -200px;
-    }
 
 
-
-    header .navbar .menu li {
-        text-align: center;
-    }
-
-    header .navbar .menu li:hover,
-    header .navbar .menu li:focus {
-        color: #000;
-    }
-
-	/* 
-	
-    mainImg 
-    section#mainImg .mainText .title {
-        position: absolute;
-        font-size: 80%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-    }
-
-    section#mainImg .mainText .title h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-        font-weight: normal;
-    }
-
-    section#mainImg .mainText .title p {
-        font-weight: bold;
-        font-size: 60px;
-    }
-
-    section#mainImg .mainText .ciDown {
-        text-align: center;
-        left: 50%;
-        top: 70%;
-        transform: translate(-50%, -50%);
-
-    }
-
-    section#mainImg .mainText .ciDown h3 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    section#mainImg .mainText .ciDown .btn {
-        left: 50%;
-        top: 100px;
-        transform: translateX(-50%);
-    }
-
-	 */
 	
 	/* mainImg */
 section#mainImg {   
