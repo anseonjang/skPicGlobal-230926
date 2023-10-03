@@ -456,24 +456,40 @@ footer ul.sns i {
 
     /* <<- 미디어쿼리 넣기 - 괄호는 맨끝*/
 
-    header .navbar {
-        background-color: rgba(0, 0, 0, 0.7);
+ header { /* 수정 ★ 23.10.03 */    
+	 width: 100%;
+	  background-color: rgba(0, 0, 0, 0.7);
+	   margin:0 auto;
+	   
+ }	
+ 
+header .innerHeader { /* 수정 ★ 23.10.03 */    
+width: 95%;      
+/* border:1px solid red; */
+ padding: 0 0px;
+ margin:0 auto;
+  
+  }
+  header .innerHeader .navbar {  /* 수정 ★ 23.10.03 */  
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+}
 
-    }
 
 
     /* logo,menu 50%로 변경 */
 
     /* logo */
-    header .innerHeader .navbar h1.logo {
-
-        width: 65%;
-
+    header .innerHeader .navbar h1.logo img { /* 수정 ★ 23.10.03 */    
+   
+width:100px;
+margin-top:10px;
     }
 
     /* menu */
-    header .innerHeader .navbar ul.menu {
-        width: 35%;
+    header .innerHeader .navbar ul.menu { /* 수정 ★ 23.10.03 */    
+      
         display: none;
 
     }
@@ -482,10 +498,9 @@ footer ul.sns i {
 
     /* ★ 수정     header .innerHeader .navbar .toggleBtn */
     /* 모바일 토글버튼 보여줌 */
-    header .innerHeader .navbar .toggleBtn {
-        display: block;
-        /* 보여줌 */
-        margin-top: 10px;
+    header .innerHeader .navbar img.toggleBtn { /* 수정 ★ 23.10.03 */    
+        display: block;  /* 보여줌 */
+margin-top:20px;width:45px;
     }
 
     header .navbar .menu {
@@ -509,7 +524,9 @@ footer ul.sns i {
         color: #000;
     }
 
-    /* mainImg */
+	/* 
+	
+    mainImg 
     section#mainImg .mainText .title {
         position: absolute;
         font-size: 80%;
@@ -550,6 +567,51 @@ footer ul.sns i {
         transform: translateX(-50%);
     }
 
+	 */
+	
+	/* mainImg */
+section#mainImg {   
+    height: 100vh; /* 화면 높이  추가 ★ 23.10.03 */    
+}
+section#mainImg .mainText .title {
+    position: absolute;
+    font-size: 80%;
+    left: 50%;
+    top: 50vh; /* 중앙 정렬, 화면 높이의 중간으로 위치  추가 ★ 23.10.03 */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+section#mainImg .mainText .title h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+section#mainImg .mainText .title p {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+section#mainImg .mainText .ciDown {
+    text-align: center;
+    left: 50%;
+    top: 80vh; /* 화면 높이의 70% 위치로 위치   추가 ★ 23.10.03*/
+    transform: translate(-50%, -50%);
+}
+
+section#mainImg .mainText .ciDown h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+section#mainImg .mainText .ciDown .btn {
+    left: 50%;
+    top: 10vh; /* 화면 높이의 80% 위치로 위치  추가 ★ 23.10.03 */
+    transform: translateX(-50%);
+}
+
+	
     /* ====================
     about 
 ====================*/
@@ -596,7 +658,7 @@ footer ul.sns i {
 ====================*/
 
     section#career {
-        height: 700px;
+           height:90vh; /* 화면 높이  추가 ★ 23.10.03 */    
 
     }
 
@@ -655,8 +717,9 @@ footer ul.sns i {
 
     /* 각 섹션 제목 */
     section#products {
-       
+         height:auto; /* 수정 ★ 23.10.03 */   
         background-color: #fff;
+		overflow:hidden;
     }
     
     section#products .productsInner {
@@ -717,6 +780,9 @@ footer ul.sns i {
         text-align: justify;
         line-height: 1.6;
     }
+	
+	/* footer */
+	footer {    height:10vh;  /* 추가 ★ 23.10.03 */     }
 
 /* topBtn */
 .topBtn {
