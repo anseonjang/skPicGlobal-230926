@@ -180,7 +180,7 @@ footer ul.sns i { color: #999; }
  /* <<- 미디어쿼리 넣기 - 괄호는 맨끝*/
 
  header { /* 수정 ★ 23.10.03 */ 
- width: 100%; background-color: rgba(0, 0, 0, 0.7); margin:0 auto; }
+ width: 100%; background-color: rgba(0, 0, 0, 0.8); margin:0 auto; }
  
 header .innerHeader { /* 수정 ★ 23.10.03 */ 
 width: 95%;/* border:1px solid red; */
@@ -192,7 +192,7 @@ width: 95%;/* border:1px solid red; */
 
  /* menu */
  header .innerHeader .navbar ul.menu { /* 수정 ★ 23.10.03 */ 
- display: none; flex-direction: column; background-color: rgba(0, 0, 0, 0.7); /* 배경색 적용 */
+ display: none; flex-direction: column; background-color: rgba(0, 0, 0, 0.8); /* 배경색 적용 */
  width: 100%; /* 가득 차도록 설정 */
  position: absolute; top: 37%; /* 메뉴가 토글 버튼 아래에 나타나도록 설정 */
  left: 0; z-index: 1; /* 토글 버튼 위로 나타나도록 z-index 설정 */
@@ -201,12 +201,12 @@ width: 95%;/* border:1px solid red; */
 
 
 .menu li a { /* 추가 ★ 23.10.03 */ 
- display: block; font-size: 22px;width:100%;height:70px;line-height:70px;margin-top:0;border-bottom:1px solid rgba(255,255,255,0.2);
+ display: block; font-size: 22px;width:100%;height:70px;line-height:70px;margin-top:0;border-bottom:1px solid rgba(255,255,255,0.3);
 }
 
 /* 추가 ★ 23.10.03 */ 
 .menu li a:hover, 
-.menu li a:focus { background:rgba(0,0,0,0.3); } 
+.menu li a:focus { background:rgba(0,0,0,0.9); } 
 
  /* 토글 버튼 스타일 */
  header .innerHeader .navbar img.toggleBtn { /* 수정 ★ 23.10.03 */ 
